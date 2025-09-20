@@ -1,0 +1,151 @@
+/* Footer.css */
+/* Color Palette: #006d77, #83c5be, #edf6f9, #ffddd2, #e29578 */
+
+.footer-container {
+  background-color: #006d77;
+  color: #edf6f9;
+  padding: 20px 5%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Contact Info Section */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.call-today-label {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.phone-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 5px 0 0;
+}
+
+/* Location Info Section */
+.location-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.location-icon {
+  width: 30px;
+  height: 30px;
+  background-color: #83c5be;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.map-pin {
+  width: 15px;
+  height: 15px;
+  stroke: #fff;
+}
+
+.address-text {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Virtual Appointment Section */
+.virtual-appointment {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.virtual-label {
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.reserve-button {
+  background-color: #e29578;
+  color: #fff;
+  padding: 12px 25px;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  transform: scale(1); /* Initial state */
+}
+
+/* Hover effect */
+.reserve-button:hover {
+  background-color: #ffddd2;
+  color: #006d77;
+}
+
+/* Click animation (on active state) */
+.reserve-button.clicked {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .contact-info,
+  .location-info,
+  .virtual-appointment {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .virtual-appointment {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    padding: 20px 3%;
+  }
+
+  .phone-number {
+    font-size: 1.3em;
+  }
+
+  .virtual-label {
+    white-space: normal;
+  }
+
+  .reserve-button {
+    width: 100%;
+    text-align: center;
+  }
+}

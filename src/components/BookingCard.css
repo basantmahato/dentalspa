@@ -1,0 +1,152 @@
+/* Color Palette:
+  --color-primary: #006d77;
+  --color-secondary: #83c5be;
+  --color-background-light: #edf6f9;
+  --color-accent-peach: #ffddd2;
+  --color-accent-orange: #e29578;
+*/
+
+.booking-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff; /* White background */
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: Arial, sans-serif;
+}
+
+.booking-card-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.text-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.subtitle {
+  color: #83c5be;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin: 0 0 5px;
+  letter-spacing: 1px;
+}
+
+.title {
+  color: #006d77;
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.cta-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  text-align: right;
+  padding-left: 20px;
+}
+
+.description {
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+  margin: 0 0 20px;
+}
+
+.book-now-button {
+  background-color: #006d77;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  transform: translateX(0); /* Initial state for animation */
+}
+
+/* Hover effect */
+.book-now-button:hover {
+  background-color: #e29578;
+  transform: translateX(10px); /* Move button slightly to the right on hover */
+}
+
+/* Button animation on initial load - optional, but good for dynamic feel */
+.book-now-button {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* Media Queries */
+
+/* Tablet and smaller desktops */
+@media (max-width: 992px) {
+  .booking-card-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text-section,
+  .cta-section {
+    padding: 0;
+  }
+  
+  .text-section {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .cta-section {
+    align-items: center; /* Center items for column layout */
+    text-align: center;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 576px) {
+  .booking-card-container {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
+
+  .description {
+    font-size: 0.9em;
+  }
+
+  .book-now-button {
+    padding: 12px 24px;
+    font-size: 0.9em;
+  }
+}

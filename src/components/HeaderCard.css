@@ -1,0 +1,83 @@
+/* HeaderCard.css */
+/* Color Palette: #006d77, #83c5be, #edf6f9, #ffddd2, #e29578 */
+
+.header-card {
+  background-color: #ffddd2;
+  padding: 15px 20px;
+  color: #006d77;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.header-card:hover {
+  transform: translateY(-3px);
+}
+
+.header-card-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.address,
+.phone {
+  margin: 0;
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.address:hover,
+.phone:hover {
+  transform: scale(1.05);
+}
+
+.phone {
+  font-weight: bold;
+  text-align: right;
+}
+
+.phone-label {
+  color: #e29578;
+  font-weight: normal;
+}
+
+.phone-number {
+  font-size: 16px;
+  color: #006d77;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+  .header-card-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .address,
+  .phone {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .header-card {
+    display: none;
+    padding: 10px;
+  }
+  
+  .address,
+  .phone {
+    font-size: 12px;
+  }
+  
+  .phone-number {
+    font-size: 14px;
+  }
+}
