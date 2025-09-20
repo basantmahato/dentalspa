@@ -14,7 +14,7 @@ const BookingCard = () => {
             Expert dental services tailored to maintain your beautiful smile in a comfortable environment.
           </p>
           <button className="book-now-button">
-            Book Now 📞
+            Book An Appointment 📞
           </button>
         </div>
       </div>
