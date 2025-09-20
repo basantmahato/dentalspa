@@ -10,6 +10,8 @@ import WhatsAppIcon from "./components/WhatsAppIcon";
 import AboutClinic from "./components/AboutClinic";
 import HeaderCard from "./components/HeaderCard";
 import ContactUs from "./components/ContactUs";
+import MapComponent from "./components/MapComponent";
+
 
 function App() {
 
@@ -32,6 +34,7 @@ function App() {
       <Services />
       <Testimonials />
       <Accordion />
+       <MapComponent />
       </>
 
     } />
@@ -53,11 +56,13 @@ function App() {
      <Route path="/contact" element={
       <>
       <ContactUs />
+       <MapComponent />
       </>
     } />
 
 
     </Routes>
+   
     <Footer />
 
     </>

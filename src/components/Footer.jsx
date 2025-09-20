@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Footer.css'; 
+import { FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   const [isClicked, setIsClicked] = useState(false);
@@ -13,16 +14,17 @@ const Footer = () => {
     <footer className="footer-container">
       <div className="footer-content">
         <div className="contact-info">
-          <p className="call-today-label">Call Today</p>
-          <p className="phone-number">0930*****13</p>
+          <p className="call-today-label">Call Today
+            <p className="">0930*****13</p>
+          </p>
+          
         </div>
 
         <div className="location-info">
           <div className="location-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="map-pin">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-              <circle cx="12" cy="10" r="3" />
-            </svg>
+
+                <FaMapMarkerAlt className="info-icon" />
+            
           </div>
           <p className="address-text">
            DentalSpa 59, next to BSNL Office, in front of People's Academy School, New Bardwari, Sakchi, Jamshedpur, Jharkhand 831001

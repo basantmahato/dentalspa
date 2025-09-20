@@ -16,6 +16,8 @@
   color: #006d77;
   font-weight: bold;
   margin-bottom: 40px;
+   transform: translateY(0);
+  animation: fadeInDown 1s ease-out;
 }
 
 .services-card-container {
