@@ -11,6 +11,7 @@ import AboutClinic from "./components/AboutClinic";
 import HeaderCard from "./components/HeaderCard";
 import ContactUs from "./components/ContactUs";
 import MapComponent from "./components/MapComponent";
+import Carousel from "./components/Carousel";
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
     <Route path="/about" element={
       <>
       <DentalCard />
+         <Carousel />
       <AboutClinic />
       </>
     } />
@@ -56,6 +58,7 @@ function App() {
      <Route path="/contact" element={
       <>
       <ContactUs />
+   
        <MapComponent />
       </>
     } />
